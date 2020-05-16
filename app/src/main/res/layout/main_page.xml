@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_file">
+
+    <RelativeLayout
+        android:id="@+id/menuAndSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/categoryBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:background="@color/blueColor"
+            android:text="@string/menu"
+            android:textColor="@color/whiteColor"
+            android:textSize="25sp"
+            android:onClick="goToProfilePage"/>
+
+        <EditText
+            android:id="@+id/main_searchBar"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:hint="@string/search"
+            android:autofillHints="@string/search"
+            android:textColorHint="@color/blackColor"
+            android:background="@drawable/searchbar"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:ems="10"
+            android:inputType="textLongMessage"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/categoryBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="480dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuAndSearch">
+
+        <ImageView
+            android:id="@+id/electronics_img"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/electronics_icon"
+            android:contentDescription="@string/electronics" />
+
+        <TextView
+            android:id="@+id/electronics_text"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/electronics_img"
+            android:gravity="center"
+            android:text="@string/electronics"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.227" />
+
+        <ImageView
+            android:id="@+id/books_img"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="95dp"
+            android:background="@drawable/books_icon"
+            android:contentDescription="@string/books" />
+
+        <TextView
+            android:id="@+id/books_text"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/books_img"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="95dp"
+            android:gravity="center"
+            android:text="@string/books"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.371"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.228" />
+
+        <ImageView
+            android:id="@+id/toys_img"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="95dp"
+            android:background="@drawable/toys_icon"
+            android:contentDescription="@string/toys" />
+
+        <TextView
+            android:id="@+id/toys_text"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toys_img"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="95dp"
+            android:gravity="center"
+            android:text="@string/toys"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.731"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.286" />
+
+        <ImageView
+            android:id="@+id/office_img"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/office_icon"
+            android:contentDescription="@string/office" />
+
+        <TextView
+            android:id="@+id/office_text"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/office_img"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="@string/office"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.914"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.286" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/popularItemsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/popular_items"
+        android:textColor="@color/blackColor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/popularItemsTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryBar"
+        app:layout_constraintVertical_bias="0.346" />
+
+    <ScrollView
+        android:id="@+id/popularItemsTable"
+        android:layout_width="360dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popularItemsHeader">
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="380dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/popularItemsTableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/popularItemsRow1Item1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:contentDescription="@string/dimmed_monitor"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    android:background="@drawable/table_border"/>
+
+                <ImageView
+                    android:id="@+id/popularItemsRow1Item2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="1"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:contentDescription="@string/crayons"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    android:background="@drawable/table_border"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/popularItemsTableRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:id="@+id/popularItemsRow2Text1"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:text="@string/dimmed_monitor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:singleLine="false"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/popularItemsRow2Text2"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:text="@string/crayons"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:singleLine="false"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/popularItemsTableRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/popularItemsRow3Item1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:contentDescription="@string/laptop"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    android:background="@drawable/table_border"/>
+
+                <ImageView
+                    android:id="@+id/popularItemsRow3Item2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="1"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:contentDescription="@string/book"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    android:background="@drawable/table_border"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/popularItemsTableRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:id="@+id/popularItemsRow4Text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:text="@string/laptop"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:singleLine="false"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/popularItemsRow4Text2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:text="@string/laptop"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:singleLine="false"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DebugApp</string>
+    <string name="toys">Toys</string>
+    <string name="office">Office</string>
+    <string name="menu">Menu</string>
+    <string name="search">Search items</string>
+    <string name="electronics">Electronics</string>
+    <string name="books">Books</string>
+    <string name="popular_items">Popular items</string>
+    <string name="dimmed_monitor">Dimmed monitor and everything you want and maybe even more</string>
+    <string name="crayons">Crayons</string>
+    <string name="laptop">Laptop</string>
+    <string name="book">Book</string>
+    <string name="appIcon">Start</string>
+    <string name="backButton">Back</string>
+    <string name="makePic">Make Picture</string>
+    <string name="changeEmail">Change email address</string>
+    <string name="enterNewEmail">Enter new email address</string>
+    <string name="enterNewPw">Enter new Password</string>
+    <string name="changePassword">Change password:</string>
+    <string name="buttonSend">Change</string>
+    <string name="change_login_info">Change login information</string>
+</resources>

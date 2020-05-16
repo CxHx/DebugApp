@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_file">
+
+    <RelativeLayout
+        android:id="@+id/appIconLayoutProfileP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/PictureSection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/table_border">
+
+            <ImageView
+                android:id="@+id/appIconProfileP"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/app_icon_64px"
+                android:contentDescription="@string/appIcon" />
+
+            <TextView
+                android:id="@+id/appIconTextProfileP"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appIconProfileP"
+                android:layout_marginStart="3dp"
+                android:gravity="center"
+                android:text="@string/appIcon"
+                android:textColor="@color/blackColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/backButtonProfileP"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/blueColor"
+            android:text="@string/backButton"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/PictureSection"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginInfoHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appIconLayoutProfileP">
+
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/table_border"
+            android:padding="3dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <Button
+            android:id="@+id/makePicButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/blueColor"
+            android:text="@string/makePic"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/loginInfoHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+
+        android:text="@string/change_login_info"
+        android:textColor="@color/blackColor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/changeLoginView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PictureSection" />
+
+
+    <RelativeLayout
+        android:id="@+id/changeLoginView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginInfoHeader">
+
+        <EditText
+            android:id="@+id/newEmail"
+            android:layout_width="260dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:autofillHints="@string/enterNewEmail"
+            android:background="@drawable/enter_text_lr"
+            android:gravity="center"
+            android:hint="@string/enterNewEmail"
+            android:textColorHint="@color/blackColor"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/sendNewEmail"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/blueColor"
+            android:text="@string/buttonSend"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/newPw"
+            android:layout_width="260dp"
+            android:layout_height="49dp"
+            android:layout_below="@+id/newEmail"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:autofillHints="@string/enterNewPw"
+            android:background="@drawable/enter_text_lr"
+            android:gravity="center"
+            android:hint="@string/enterNewPw"
+            android:textColorHint="@color/blackColor"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/sendNewPw"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sendNewEmail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/blueColor"
+            android:text="@string/buttonSend"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
