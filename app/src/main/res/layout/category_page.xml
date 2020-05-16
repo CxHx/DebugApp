@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_file">
+
+    <RelativeLayout
+        android:id="@+id/appIconLayoutCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/table_border"
+        app:layout_constraintBottom_toTopOf="@+id/filterAndSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/appIconCP"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/app_icon_64px"
+            android:contentDescription="@string/appIcon" />
+
+        <TextView
+            android:id="@+id/appIconTextCP"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appIconCP"
+            android:layout_marginStart="3dp"
+            android:gravity="center"
+            android:text="@string/appIcon"
+            android:textColor="@color/blackColor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/categoryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/category"
+        android:textColor="@color/blackColor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/filterAndSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/filterAndSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/filteredItemsTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryHeader">
+
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:background="@color/blueColor"
+            android:text="@string/filter"
+            android:textColor="@color/whiteColor"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/categorySearchBar"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:autofillHints="@string/search"
+            android:background="@drawable/searchbar"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="textLongMessage"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/filteredItemsTable"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterAndSearch">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="1">
+
+            <TableRow
+                android:id="@+id/filteredItemsTableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/table_border">
+
+                <ImageView
+                    android:id="@+id/filteredTableRow1Item1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:contentDescription="@string/dimmed_monitor"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/filteredTableRow1Text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="@string/dimmed_monitor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filteredItemsTableRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/table_border">
+
+                <ImageView
+                    android:id="@+id/filteredTableRow2Item1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:contentDescription="@string/dimmed_monitor"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/filteredTableRow2Text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="@string/dimmed_monitor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filteredItemsTableRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/table_border">
+
+                <ImageView
+                    android:id="@+id/filteredTableRow3Item1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:contentDescription="@string/dimmed_monitor"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/filteredTableRow3Text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="@string/dimmed_monitor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/filteredItemsTableRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/table_border">
+
+                <ImageView
+                    android:id="@+id/filteredTableRow4Item1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:contentDescription="@string/dimmed_monitor"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/filteredTableRow4Text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="@string/dimmed_monitor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

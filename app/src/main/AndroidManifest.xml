@@ -21,6 +21,9 @@
         </activity>
         <activity android:name=".ProfilePage">
         </activity>
+        <activity android:name=".CategoryPage"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_file">
+
+    <RelativeLayout
+        android:id="@+id/appIconLayoutAAP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/activeAlertListHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/table_border">
+
+            <ImageView
+                android:id="@+id/appIconAAP"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/app_icon_64px"
+                android:contentDescription="@string/appIcon" />
+
+            <TextView
+                android:id="@+id/appIconTextAAP"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appIconAAP"
+                android:layout_marginStart="3dp"
+                android:gravity="center"
+                android:text="@string/appIcon"
+                android:textColor="@color/blackColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/backButtonAAP"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/blueColor"
+            android:text="@string/backButton"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activeAlertListHeader"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/activeAlertListHeader"
+        android:textColor="@color/blackColor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/notificationTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appIconLayoutAAP" />
+
+    <ScrollView
+        android:id="@+id/activeAlertTable"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteMarkedButtonAAP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeAlertListHeader">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <TableRow
+                android:id="@+id/activeAlertsRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/table_border"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:id="@+id/activeAlertProductNameRow1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/table_splitter_line_top"
+                        android:ellipsize="end"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="7dp"
+                        android:singleLine="true"
+                        android:text="@string/product_name"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/toProductRow1"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/activeAlertProductNameRow1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/blueColor"
+                        android:text="@string/alertToProduct"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1">
+
+                    <TextView
+                        android:id="@+id/activeAlertPriceTagRow1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="34dp"
+                        android:background="@drawable/table_splitter_line_top"
+                        android:text="@string/rndPrice"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activeAlertPriceTagRow1"
+                        android:text="@string/rndCreationDate"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/checkboxAlert1"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_column="2" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/activeAlertsRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/table_border"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:id="@+id/activeAlertProductNameRow2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/table_splitter_line_top"
+                        android:ellipsize="end"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="7dp"
+                        android:singleLine="true"
+                        android:text="@string/product_name"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/toProductRow2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/activeAlertProductNameRow2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/blueColor"
+                        android:text="@string/alertToProduct"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1">
+
+                    <TextView
+                        android:id="@+id/activeAlertPriceTagRow2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="34dp"
+                        android:background="@drawable/table_splitter_line_top"
+                        android:text="@string/rndPrice"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activeAlertPriceTagRow2"
+                        android:text="@string/rndCreationDate"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/checkboxAlert2"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_column="2" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/activeAlertsRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/table_border"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:id="@+id/activeAlertProductNameRow3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/table_splitter_line_top"
+                        android:ellipsize="end"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="7dp"
+                        android:singleLine="true"
+                        android:text="@string/product_name"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/toProductRow3"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/activeAlertProductNameRow3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/blueColor"
+                        android:text="@string/alertToProduct"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1">
+
+                    <TextView
+                        android:id="@+id/activeAlertPriceTagRow3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="34dp"
+                        android:background="@drawable/table_splitter_line_top"
+                        android:text="@string/rndPrice"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activeAlertPriceTagRow3"
+                        android:text="@string/rndCreationDate"
+                        android:textColor="@color/blackColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/checkboxAlert3"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_column="2" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/deleteMarkedButtonAAP"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/blueColor"
+        android:text="@string/deleteButton"
+        android:textColor="@color/whiteColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeAlertTable" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
