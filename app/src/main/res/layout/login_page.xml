@@ -101,7 +101,8 @@
             android:background="@color/blueColor"
             android:text="@string/registerB"
             android:textColor="@color/whiteColor"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:onClick="goToRegisterPage"/>
 
         <Button
             android:id="@+id/loginB"
@@ -112,7 +113,8 @@
             android:background="@color/blueColor"
             android:text="@string/loginB"
             android:textColor="@color/whiteColor"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:onClick="goToMainPage"/>
 
     </RelativeLayout>
 

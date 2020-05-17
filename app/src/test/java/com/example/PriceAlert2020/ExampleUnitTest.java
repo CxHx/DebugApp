@@ -1,4 +1,4 @@
-package com.example.debugapp;
+package com.example.PriceAlert2020;
 
 import org.junit.Test;
 

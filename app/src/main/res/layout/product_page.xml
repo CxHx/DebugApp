@@ -8,7 +8,7 @@
     android:background="@drawable/app_background_file">
 
     <RelativeLayout
-        android:id="@+id/appTopBar"
+        android:id="@+id/appTopBarPP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -57,7 +57,8 @@
             android:background="@color/blueColor"
             android:text="@string/backButton"
             android:textColor="@color/whiteColor"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="backToCategoryPage"/>
 
     </RelativeLayout>
 
@@ -76,7 +77,7 @@
         app:layout_constraintBottom_toTopOf="@+id/productImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTopBar" />
+        app:layout_constraintTop_toBottomOf="@+id/appTopBarPP" />
 
     <ImageView
         android:id="@+id/productImage"
@@ -166,7 +167,8 @@
             android:background="@color/blueColor"
             android:text="@string/setAlert"
             android:textColor="@color/whiteColor"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="goToSetAlert"/>
 
         <Button
             android:id="@+id/directcheckout"

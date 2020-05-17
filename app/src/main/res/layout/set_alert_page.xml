@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background_file">
 
     <RelativeLayout
-        android:id="@+id/appIconLayoutSAP"
+        android:id="@+id/appTopBarSAP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -19,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
+            android:id="@+id/appIconLayoutSAP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -56,7 +56,8 @@
             android:background="@color/blueColor"
             android:text="@string/backButton"
             android:textColor="@color/whiteColor"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="backToProductPage"/>
 
     </RelativeLayout>
 
@@ -71,7 +72,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appIconLayoutSAP">
+        app:layout_constraintTop_toBottomOf="@+id/appTopBarSAP">
 
         <TextView
             android:id="@+id/setAlertFor"

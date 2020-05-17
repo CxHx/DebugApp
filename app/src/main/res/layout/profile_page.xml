@@ -7,7 +7,7 @@
     android:background="@drawable/app_background_file">
 
     <RelativeLayout
-        android:id="@+id/appIconLayoutProfileP"
+        android:id="@+id/appTopBarProfileP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
+            android:id="@+id/appIconLayoutProfileP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -72,7 +73,7 @@
         app:layout_constraintBottom_toTopOf="@+id/loginInfoHeader"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appIconLayoutProfileP">
+        app:layout_constraintTop_toBottomOf="@+id/appTopBarProfileP">
 
         <ImageView
             android:id="@+id/profilePicture"

@@ -7,7 +7,7 @@
     android:background="@drawable/app_background_file">
 
     <RelativeLayout
-        android:id="@+id/appIconLayoutNP"
+        android:id="@+id/appTopBarNP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
+            android:id="@+id/appIconLayoutNP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -57,7 +58,8 @@
             android:background="@color/blueColor"
             android:text="@string/backButton"
             android:textColor="@color/whiteColor"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="backToMainPage"/>
 
     </RelativeLayout>
 
@@ -75,7 +77,7 @@
         app:layout_constraintBottom_toTopOf="@+id/notificationTable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appIconLayoutNP" />
+        app:layout_constraintTop_toBottomOf="@+id/appTopBarNP" />
 
     <ScrollView
         android:id="@+id/notificationTable"
